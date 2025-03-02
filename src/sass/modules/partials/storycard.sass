@@ -1,0 +1,161 @@
+.stories
+  overflow: hidden
+
+  .container
+    gap: 24px
+    @media only screen and (max-width: 1450px)
+      justify-content: center
+    @media only screen and (max-width: 700px)
+      flex-direction: column
+
+.story
+  position: relative
+  width: 520px
+  min-height: 660px
+  margin-top: 200px
+  padding: 32px
+
+  box-sizing: border-box  
+  border-radius: 8px
+
+  @media only screen and (max-width: 769px)
+    padding: 72px 24px 24px 24px
+    min-height: 421px
+    margin-top: 0
+    width: 100%
+    max-width: 520px
+
+  &::before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    border-radius: 8px
+    background: linear-gradient(197.24deg, rgba(34, 236, 187, 0.49) 0%, #00294B 76.01%)
+
+    opacity: 0
+    @include transition
+
+    @media only screen and (max-width: 768px)
+      background: linear-gradient(207.19deg, #22ECBB 0.78%, #00294B 83.03%)
+      box-shadow: 2px 4px 30px rgba(0, 35, 67, 0.15)
+
+  &:hover
+    @media only screen and (min-width: 769px)
+      &::before
+        opacity: 1
+      .story__text 
+        margin-top: 24px
+      h3
+        position: relative
+
+  &--hovered
+    &::before
+      opacity: 1
+      z-index: 1
+
+    h3
+      opacity: 0
+
+    .story__logo
+      img 
+        filter: brightness(0) invert(1) 
+    
+
+  &__button
+    display: none
+
+    width: 48px
+    height: 48px
+
+    position: absolute
+    top: 24px
+    left: 24px
+
+    background-color: $teal
+    border-radius: 40px
+    background-size: 16px 16px
+    background-position: 50% 50%
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7 9.5V14H9V9.5H13.5V7.5H9V3H7V7.5H2.5V9.5H7Z' fill='%2300294b'/%3E%3C/svg%3E")
+    background-repeat: no-repeat
+
+    @include transition
+    z-index: 1
+
+    &:hover 
+      .story
+        &::before
+          opacity: 1
+
+    @media only screen and (max-width: 768px)
+      display: block
+    
+  &__image
+    position: absolute
+    filter: drop-shadow(2px 4px 30px rgba(0, 35, 67, 0.15))
+    @include transition  
+
+    &--wide 
+      max-width: 388px
+      right: -90px
+      top: -110px
+      
+      @media only screen and (max-width: 1220px)
+        right: -270px
+        top: 0
+        bottom: 0
+        margin: auto 
+        height: fit-content
+        max-width: 399px
+
+    &--narrow
+      max-width: 180px
+      top: -110px
+      right: 16px
+      @media only screen and (max-width: 768px)
+        right: -60px
+        top: 72px
+
+  &__logo
+    max-width: 110px
+    position: absolute
+    top: 32px
+    left: 32px
+    z-index: 1
+    @include transition 
+
+    @media only screen and (max-width: 768px)
+      max-width: 88px
+      right: 24px
+      top: 24px
+      left: unset
+
+  &__title
+    @include transition
+
+  h3 
+    z-index: 1
+    @include transition  
+    @media only screen and (max-width: 768px)
+      font-size: 20px
+      line-height: 24px
+  .narrow
+    @media only screen and (max-width: 768px)
+      max-width: 70%
+
+
+  &__text
+    
+    overflow: hidden
+    z-index: 1
+
+    @include transition  
+
+    max-height: 0
+
+
+  .btn 
+    margin-top: 24px  
+    z-index: 1

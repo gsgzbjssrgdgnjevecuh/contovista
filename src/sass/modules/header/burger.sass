@@ -1,0 +1,48 @@
+.burger
+  display: none
+  
+  width: 100px
+  height: 56px
+  position: relative
+
+  box-shadow: 2px 4px 30px rgba(0, 35, 67, 0.15)
+  background-color: $white
+  border-radius: 50px
+
+  -webkit-tap-highlight-color: transparent
+  cursor: pointer
+
+  &--toggled 
+    .burger__line--top
+      transform: rotate(45deg)
+      top: 27px
+    .burger__line--middle
+      transform: rotate(225deg)
+    .burger__line--bottom
+      transform: rotate(-45deg)
+      bottom: 27px
+
+  &__line
+    position: absolute
+    left: 0
+    right: 0
+    margin: 0 auto 
+
+    width: 32px
+    height: 2px
+
+    background-color: $dark-sky
+
+    @include transition
+
+    &--top
+      top: 20px
+    &--middle
+      top: 27px
+    &--bottom
+      bottom: 20px
+
+  @media only screen and (max-width: 1230px)
+    display: block
+
+

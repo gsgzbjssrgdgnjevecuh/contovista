@@ -1,0 +1,112 @@
+.services
+  overflow: hidden
+
+
+  &__wrapper
+    padding: 140px 0 30px
+    @media only screen and (max-width: 768px)
+      padding-bottom: 24px
+
+    .slick-track
+      display: flex!important
+    .slick-list
+      overflow: visible
+      
+    .slick-active
+      @media only screen and (max-width: 767px)
+        box-shadow: 2px 4px 30px rgba(0, 35, 67, 0.15)
+        border-color: $white
+
+    .slick-dots
+      li
+        width: 8px
+        height: 8px 
+        opacity: .5 
+        border-radius: 10px
+        background-color: $teal 
+
+        @include transition
+
+      button
+        display: none
+
+      .slick-active
+        width: 24px
+        opacity: 1
+        
+  &__item
+    // position: relative
+    // padding: 64px 32px 32px
+    // max-width: 380px
+    height: inherit 
+    // box-sizing: border-box
+
+    color: inherit
+    // background-color: $white
+    // border: 1px solid $dark-sky-20
+    // border-radius: 8px
+
+    // display: flex!important
+    // flex-direction: column
+
+    transition: all .1s ease-in-out
+
+    // @media only screen and (max-width: 768px)
+    //   padding-top: 54px
+
+    &:not(:last-child) 
+      margin-right: 52px
+      @media only screen and (max-width: 1000px)
+        margin-right: 16px
+
+    &--wrapper 
+      position: relative
+      padding: 64px 32px 32px
+      max-width: 380px
+      height: 100% 
+      box-sizing: border-box
+
+      // color: inherit
+      background-color: $white
+      border: 1px solid $dark-sky-20
+      border-radius: 8px
+
+      display: flex!important
+      flex-direction: column
+
+      transition: all .2s ease-in-out
+
+      @media only screen and (max-width: 768px)
+        padding-top: 54px
+
+      &:hover 
+        box-shadow: 2px 4px 30px rgba(0, 35, 67, 0.15)
+        border-color: $white  
+
+    &--hidden 
+      transform: translateX(100px)
+      opacity: 0
+
+    &-image 
+      width: 173px
+      position: absolute
+      left: 32px
+      top: -125px
+      @media only screen and (max-width: 768px)
+        top: -110px
+        width: 147px
+
+    
+    &-title 
+      @media only screen and (max-width: 768px)
+        font-size: 20px
+        line-height: 24px 
+    
+    &-description 
+      margin: 24px 0 
+      color: $dark-sky-80 
+
+    &-button 
+      width: fit-content
+      justify-self: flex-end
+      margin-top: auto

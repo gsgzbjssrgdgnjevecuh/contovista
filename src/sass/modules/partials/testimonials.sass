@@ -1,0 +1,73 @@
+.testimonial
+  position: relative
+  width: 532px
+  box-sizing: border-box 
+  margin: 48px 110px
+  padding: 48px 48px 18px 96px
+
+  background-color: $white
+  border: 1px solid $dark-sky-20
+  border-radius: 8px
+
+  @media only screen and (max-width: 1050px)
+    margin: 48px 70px
+
+  @media only screen and (max-width: 850px)
+    margin: 74px 24px 24px
+    padding: 58px 24px 24px
+
+  @media only screen and (max-width: 600px)
+    width: 90vw
+
+
+  &__logo
+    max-width: 99px
+    position: absolute
+    top: 24px
+    right: 24px
+
+  &__image
+    width: 166px
+    border-radius: 50%
+    overflow: hidden
+
+    position: absolute
+    top: 48px
+    left: -92px
+
+    @media only screen and (max-width: 850px)
+      width: 116px
+      top: -70px
+      left: 24px
+
+  &__subtitle
+    margin: 8px 0 16px
+
+
+.testimonials
+
+  .slick-track
+    display: flex !important
+  .slick-slide
+    height: inherit !important
+  
+  .slick-active
+    box-shadow: 2px 4px 30px rgba(0, 35, 67, 0.15)
+    border-color: $white
+
+  .slick-dots
+    li
+      width: 8px
+      height: 8px 
+      opacity: .5 
+      border-radius: 10px
+      background-color: $teal 
+
+      @include transition
+
+    button
+      display: none
+
+    .slick-active
+      width: 24px
+      opacity: 1

@@ -1,0 +1,273 @@
+.btn
+  font-family: $main-font 
+  font-size: 18px
+  line-height: 22px
+  font-weight: 700 
+  text-align: center
+
+  border-radius: 40px
+  border: 2px solid $teal 
+  color: $dark-sky
+  background-color: $teal 
+
+  padding: 12px 20px
+  position: relative
+
+  -webkit-tap-highlight-color: transparent
+  @include transition
+  cursor: pointer
+ 
+  &:hover 
+    background-color: $teal-hover
+    border: 2px solid $teal-hover
+    color: $white
+
+  &:focused 
+    background-color: $teal-hover
+    color: $white
+    box-shadow: 0px 0px 0px 3px $teal
+
+  @media only screen and (max-width: 768px)
+    font-size: 16px
+    line-height: 20px 
+
+  &--arrowed
+    padding-right: 34px
+    position: relative
+
+    &::after 
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      margin: auto 0
+      right: 13px
+      width: 18px
+      height: 18px
+
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.27817 5.00002L10.5563 9.2782L6.27817 13.5564' stroke='%2300294B' stroke-width='2'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+
+      @include transition
+
+    &:hover  
+      &:after
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.27817 5.00002L10.5563 9.2782L6.27817 13.5564' stroke='%23ffffff' stroke-width='2'/%3E%3C/svg%3E")
+        transform: translateX(3px)
+  
+  // Download
+  &--download
+    padding-right: 34px
+    position: relative
+
+    &::after 
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      margin: auto 0
+      right: 13px
+      width: 16px
+      height: 16px
+      
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.7782 6.27817L8.5 10.5563L4.22183 6.27817' stroke='%2300294B' stroke-width='2'/%3E%3Crect x='7.5' y='1' width='2' height='9' fill='%2300294B'/%3E%3Crect x='13' y='13' width='2' height='9' transform='rotate(90 13 13)' fill='%2300294B'/%3E%3C/svg%3E ")
+      background-repeat: no-repeat 
+
+      @include transition
+
+    &:hover  
+      &:after
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.7782 6.27817L8.5 10.5563L4.22183 6.27817' stroke='%23ffffff' stroke-width='2'/%3E%3Crect x='7.5' y='1' width='2' height='9' fill='%23ffffff'/%3E%3Crect x='13' y='13' width='2' height='9' transform='rotate(90 13 13)' fill='%23ffffff'/%3E%3C/svg%3E ")
+        transform: translateY(3px)
+
+  // Bordered 
+  &--bordered
+    background-color: #ffffff00!important
+    border: 2px solid #22ecbb
+ 
+    &:hover 
+      color: $teal-hover
+      border: 2px solid $teal-hover
+
+    &:focused 
+      box-shadow: 0px 0px 0px 3px $teal-hover
+
+    &--on-dark
+      color: $white
+
+    &--arrowed 
+      padding-right: 34px
+      position: relative
+
+      &::after 
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        margin: auto 0
+        right: 13px
+        width: 18px
+        height: 18px
+
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.27817 5.00002L10.5563 9.2782L6.27817 13.5564' stroke='%2300294B' stroke-width='2'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+
+        @include transition
+
+      &:hover  
+        &:after
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.27817 5.00002L10.5563 9.2782L6.27817 13.5564' stroke='%2316BBA7' stroke-width='2'/%3E%3C/svg%3E")
+          transform: translateX(3px)
+
+      &--on-dark
+        &::after
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.27817 5.00002L10.5563 9.2782L6.27817 13.5564' stroke='%23ffffff' stroke-width='2'/%3E%3C/svg%3E")
+
+    &--plus 
+      padding-right: 38px
+      position: relative
+
+      &::after 
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        margin: auto 0
+        right: 13px
+        width: 18px
+        height: 18px
+
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7 9.5V14H9V9.5H13.5V7.5H9V3H7V7.5H2.5V9.5H7Z' fill='%2300294b'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+
+        @include transition
+
+      &:hover  
+        &:after
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7 9.5V14H9V9.5H13.5V7.5H9V3H7V7.5H2.5V9.5H7Z' fill='%2316BBA7'/%3E%3C/svg%3E")
+
+      &--loading 
+        &:after
+          animation: loading 1s ease infinite
+
+  // Label
+  &--label 
+    color: $teal
+    background-color: #ffffff00!important
+    border: none!important 
+    box-shadow: none!important 
+    &:hover 
+      color: $teal-hover
+    &:focused
+      color: $teal-hover
+
+    &--arrowed 
+      padding-right: 34px
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.27817 5.00002L10.5563 9.2782L6.27817 13.5564' stroke='%2322ECBB' stroke-width='2'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-size: 18px 18px
+      background-position: 89% 44%
+
+      &:hover 
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.27817 5.00002L10.5563 9.2782L6.27817 13.5564' stroke='%2316BBA7' stroke-width='2'/%3E%3C/svg%3E")
+        background-position: 94% 44%
+
+  // Fantasy
+  &--fantasy 
+    background-color: $fantasy!important
+    color: $red!important
+    border: 2px solid $fantasy 
+    &:hover 
+      border: 2px solid $red 
+    &:focused 
+      box-shadow: 0px 0px 0px 3px $red 
+
+    &--arrowed 
+      padding-right: 34px
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.27817 5.00002L10.5563 9.2782L6.27817 13.5564' stroke='%23F63529' stroke-width='2'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-size: 18px 18px
+      background-position: 89% 44%
+
+      &:hover 
+        background-position: 94% 44%
+
+
+  // Gradient
+  &--gradient
+    padding: 19px 32px
+    color: $white
+    border: none 
+    background: none
+    position: relative
+    overflow: hidden
+    position: relative
+    z-index: 1
+
+    &--span1,
+    &--span2
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      z-index: -1
+  
+    &--span1
+      &::after
+        content: ''
+        position: absolute 
+        top: 0
+        left: 0
+        width: 200
+        width: 200%
+        height: 100%
+        background-size: 200%
+        background-image: linear-gradient(to right,#ff5050 0%,#CE097F 25%, #ff5050 50%, #CE097F 75%, #ff5050 90%)
+
+        transition: all 1s ease
+
+    &--span2
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 200%
+        height: 100%
+        background-size: 200%
+        // background-image: linear-gradient(90deg,#ff5050,#CE097F,#ff5050,#CE097F, #ff5050,#CE097F,#ff5050,#CE097F, #ff5050,#CE097F,#ff5050,#CE097F)
+        background-image: linear-gradient(to right,#ff5050 0%,#CE097F 25%, #ff5050 50%, #CE097F 75%, #ff5050 90%)
+        animation: 7s linear infinite gradient
+
+        opacity: 0
+        transition: all 1s ease
+
+    &:hover 
+      background: none 
+      border: none
+      .btn--gradient--span2
+        &::after
+          opacity: 1
+      
+    &:focused 
+      box-shadow: inset 0px 0px 0px 3px rgba(255, 255, 255, 0.5)
+      background: $pinky-sky-hover
+
+
+
+  
+  &--centered
+    width: fit-content
+    margin: 0 auto 
+
+  &--disbled 
+    opacity: 0.3
+    pointer-events: none
+
+
+@keyframes gradient 
+  0%
+    background-position: -100%
+  100%
+    background-position: 100%   

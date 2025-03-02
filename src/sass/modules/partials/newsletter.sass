@@ -1,0 +1,83 @@
+.newsletter 
+  position: relative
+  max-width: 1180px 
+  margin: 0 auto 
+  padding: 48px
+  box-sizing: border-box
+
+  box-shadow: 239px 138px 110px rgba(45, 0, 51, 0.01), 134px 77px 93px rgba(45, 0, 51, 0.05), 60px 34px 69px rgba(45, 0, 51, 0.09), 15px 9px 38px rgba(45, 0, 51, 0.1), 0px 0px 0px rgba(45, 0, 51, 0.1)
+  border-radius: 9px
+  background: $bg-pinky-sky
+
+  z-index: 1
+
+  @media only screen and (max-width: 1220px)
+    margin: 0 24px
+  @media only screen and (max-width: 900px)
+    flex-direction: column
+    padding: 72px 48px 48px
+  @media only screen and (max-width: 768px)
+    padding: 72px 24px 24px
+
+  &--normal
+    margin-top: 100px
+    margin-bottom: 50px
+    @media only screen and (max-width: 900px)
+      margin-top: 300px
+    @media only screen and (max-width: 768px)
+      margin-top: 160px
+
+
+  &--footer // do not forget about margins for separate section
+    transform: translateY(170px)
+    @media only screen and (max-width: 950px)
+      transform: translateY(88px)
+    @media only screen and (max-width: 900px)
+      margin-top: 130px 
+
+
+  & > *
+    &:first-child 
+      max-width: 474px
+      @media only screen and (max-width: 900px)
+        max-width: 100%
+      p 
+        margin: 24px 0
+        @media only screen and (max-width: 768px)
+          margin: 16px 0
+
+  &__wrapper
+    @media only screen and (max-width: 1170px)
+      width: 47%
+    @media only screen and (max-width: 900px)
+      width: 100%
+    @media only screen and (max-width: 768px)
+      .title
+        font-size: 30px
+        line-height: 34px
+
+  &__image
+    max-width: 586px
+
+    position: absolute
+    top: -55px
+    right: 22px
+    img  
+      width: 100%
+      height: auto
+    @media only screen and (max-width: 1170px)
+      width: 47%
+    @media only screen and (max-width: 900px)
+      max-width: 380px
+      width: 100%
+      top: -240px
+      left: 0
+      right: 0
+      margin: 0 auto
+    @media only screen and (max-width: 768px)
+      max-width: 218px
+      top: -130px
+
+  &--hidden 
+    display: none  
+  

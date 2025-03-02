@@ -1,0 +1,86 @@
+h1,
+h2,
+h3,
+h4,
+h5 
+  font-weight: 600 
+
+
+h1
+  font-size: 64px
+  line-height: 72px
+  @media only screen and (max-width: 768px)
+    font-size: 54px
+    line-height: 60px
+
+h2
+  font-size: 40px
+  line-height: 54px
+  @media only screen and (max-width: 768px)
+    font-size: 30px
+    line-height: 34px
+
+h3
+  font-size: 32px
+  line-height: 40px
+
+h4
+  font-size: 24px
+  line-height: 30px
+  @media only screen and (max-width: 768px)
+    font-size: 20px
+    line-height: 24px
+
+h5
+  font-size: 18px
+  line-height: 24px
+  @media only screen and (max-width: 768px)
+    font-size: 16px
+
+
+
+.white 
+  color: $white
+.teal
+  color: $teal
+.dark-sky-50
+  color: $dark-sky-50
+.dark-sky-80
+  color: $dark-sky-80
+
+
+.fw700
+  font-weight: 700 
+.text14
+  font-size: 14px
+  line-height: 20px
+  font-weight: 500 
+
+
+.textbox
+  padding-left: 16px
+  position: relative
+
+  &::before
+    content: ""
+    position: absolute
+    left: 0
+    top: 5px
+    width: 1px
+    height: 15px
+    background-color: #22ecbb
+
+  p,
+  ul,
+  ol,
+  h2,
+  h3,
+  h4,
+  h5 
+    margin-bottom: 20px
+ 
+p 
+  em 
+    font-style: italic 
+  strong 
+    font-weight: bold

@@ -1,0 +1,20 @@
+.breadcrumbs
+  margin-bottom: 80px
+  font-size: 14px
+  line-height: 20px
+  color: $dark-sky
+  @media only screen and (max-width: 768px)
+    margin-bottom: 40px
+
+  p 
+    display: flex
+
+  a 
+    color: $dark-sky-50
+    @include transition 
+    &:hover 
+      color: $teal 
+
+  .separator
+    margin: 0 8px
+    color: $dark-sky-50 

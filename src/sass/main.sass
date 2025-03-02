@@ -1,0 +1,71 @@
+
+@import "utils/reset"
+@import "utils/libs"
+
+@import "utils/variables"
+@import "utils/mixins"
+
+@import "utils/fonts"
+@import "utils/typography"
+
+@import "utils/framework"
+  
+@import "modules/modules"
+@import "components/components"
+
+   
+body
+  font-family: $main-font
+  font-size: 18px
+  line-height: 28px  
+  font-weight: 500
+  color: $dark-sky
+  background: $white
+  -webkit-tap-highlight-color: transparent
+  @media only screen and (max-width: 768px)
+    font-size: 16px
+
+
+
+.container
+  max-width: 1276px
+  margin: 0 auto
+  padding: 0 24px 
+
+
+.section
+  margin-bottom: 120px  
+  @media only screen and (max-width: 768px)
+    margin-bottom: 80px
+ 
+
+.wpml-ls-statics-footer
+  display: none
+
+
+.overflow-hidden
+  overflow: hidden  
+     
+
+    
+.testimonials,
+.image-copy,
+.title-copy,
+.newsletter--normal,
+.services,
+.demo,
+.scrollcopy,
+.hero__slider,
+.history-slider,
+.image-slider,
+.map,
+.products-tabs,
+.columns,
+.video,
+.contact,
+.articles,
+.team-card,
+.image
+  // display: none  
+
+  

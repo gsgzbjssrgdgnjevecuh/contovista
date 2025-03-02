@@ -1,0 +1,270 @@
+.positions 
+  position: relative
+  padding: 80px 0 170px 
+  min-height: 726px
+  background: linear-gradient(75.54deg, #00294B 6.87%, #22ECBB 92.99%)
+  // box-shadow: 1px -12px 35px -4px rgba(0,0,0,0.64) inset
+
+  &:after 
+    content: ''
+    position: absolute
+    bottom: -3px
+    left: 0
+    width: 100%
+    height: 130px
+    background-color: $white
+    clip-path: polygon(0 127px,100% 0,100% 100%,0 100%)
+
+  
+
+  @media only screen and (max-width: 768px)
+    padding: 32px 0 110px
+    &:after 
+      height: 71px
+      clip-path: polygon(0 67px,100% 0,100% 100%,0 100%)
+
+  &__bottom
+    max-width: 628px
+    margin: 36px auto 0
+
+    h4 
+      margin-bottom: 20px
+
+    p
+      color: $white
+    a
+      color: $white
+      text-decoration: underline
+      display: inline
+      @include transition
+      
+      &:hover 
+        color: $teal
+
+  img 
+    width: auto
+
+.rbox-opening-list
+  flex-direction: column-reverse
+  margin-top: 2px
+
+.rbox-jobs-group
+  margin-top: 35px!important
+  @media only screen and (max-width: 768px)
+    margin-top: 40px!important
+
+  & > *
+    &:not(:last-child) 
+      margin-bottom: 24px
+
+  h3 
+    font-weight: 700
+    font-size: 24px
+    line-height: 30px
+    color: $white
+    margin-bottom: 24px
+
+    @media only screen and (max-width: 768px)
+      margin-bottom: 16px
+      font-size: 20px
+      line-height: 24px
+
+.rbox-opening-li
+  margin: 0
+  width: 100%
+  padding: 40px
+  border-radius: 8px
+  box-sizing: border-box
+  box-shadow: 2px 4px 30px rgba(0, 35, 67, 0.15)
+
+  @media only screen and (max-width: 768px)
+    padding: 24px
+
+  &:hover 
+    a 
+      color: $teal
+
+  a
+    font-family: $main-font
+    font-weight: 700
+    font-size: 24px
+    line-height: 30px
+    color: #00294B
+    text-decoration: none
+    text-transform: unset
+
+    @include transition
+
+    @media only screen and (max-width: 768px)
+      font-size: 20px
+      line-height: 24px
+
+
+
+.rbox-job-shortdesc
+  font-weight: 500
+  font-size: 18px
+  line-height: 28px
+  color: $dark-sky-80
+  margin-top: 8px
+
+  @media only screen and (max-width: 1024px)
+    display: flex 
+    flex-direction: column
+  @media only screen and (max-width: 768px)
+    font-size: 16px
+
+.rbox-opening-position-info
+  top: 40px
+  right: 40px
+  & > *
+    &:not(:last-child) 
+      margin-right: 16px
+      @media only screen and (max-width: 768px)
+        margin-right: 8px
+
+  @media only screen and (max-width: 1024px)
+    position: relative
+    top: unset
+    right: unset!important
+    margin-top: 28px
+
+.rbox-opening-position-type,
+.rbox-opening-allows-remote
+  background-color: rgba(0,0,0,0)!important
+  border: 2px solid $dark-sky!important
+  border-radius: 40px!important
+
+  padding: 4px 16px!important
+  box-sizing: border-box
+
+  font-weight: 500
+  font-size: 14px
+  line-height: 20px
+  color: $dark-sky
+  @media only screen and (max-width: 768px)
+    font-size: 14px
+    line-height: 20px
+
+
+// Opened
+.rbox-job-longdesc
+  border-top: none 
+
+.rbox-opening-detail
+  margin: 0!important
+  padding: 40px!important
+  border-radius: 8px
+  box-shadow: 2px 4px 30px rgba(0, 35, 67, 0.15)
+
+  @media only screen and (max-width: 768px)
+    padding: 24px!important
+
+  p 
+    color: $dark-sky-80
+
+    strong 
+      font-weight: 700
+      color: $dark-sky-80
+
+  li 
+    position: relative
+    padding-left: 24px
+    color: $dark-sky-80
+    list-style: inside!important
+
+    @media only screen and (max-width: 768px)
+      padding-left: 0
+      margin-bottom: 0
+
+    &:not(:last-child) 
+      margin-bottom: 16px
+    
+    &::before
+      content: ''
+      width: 4px
+      height: 4px
+      background-color: $dark-sky
+      position: absolute
+      left: 0
+      top: 12px
+      border-radius: 50%
+
+  button
+    font-size: 18px!important
+    line-height: 22px!important
+    font-weight: 700 
+    text-align: center
+    text-transform: unset!important
+
+    border-radius: 40px
+    border: 2px solid $teal!important
+    color: $dark-sky!important
+    background-color: $teal!important 
+
+    padding: 12px 20px
+    position: relative
+
+    width: auto!important
+    height: auto!important
+    margin-left: 0!important
+
+    @include transition
+    cursor: pointer
+  
+    &:hover 
+      background-color: $teal-hover!important
+      border: 2px solid $teal-hover!important
+      color: $white!important
+
+    &:focused 
+      background-color: $teal-hover!important
+      color: $white!important
+      box-shadow: 0px 0px 0px 3px $teal
+
+    @media only screen and (max-width: 768px)
+      font-size: 16px!important
+      line-height: 20px!important 
+
+  .rbox-opening-position-info
+    position: relative
+    right: unset  
+    top: unset
+    margin-top: 20px
+ 
+
+
+.rbox-widget .rbox-btn
+  border: 2px solid $teal!important
+  
+
+.rbox-job-title
+  color: $dark-sky!important
+
+.rbox-widget .rbox-field-wrapper
+  display: flex
+  flex-direction: column
+
+.rbox-top-links,
+.rbox-bottom-links
+  a
+    font-size: 14px
+    color: $dark-sky
+    @include transition
+
+    &:hover 
+      color: $teal
+
+.rbox-error-msg
+  font-size: 13px!important
+  color: #F63529!important
+
+  margin: 0!important
+  padding: 0!important
+
+  position: absolute!important
+  left: 0
+  bottom: -22px
+
+.rbox-field-wrapper
+  position: relative

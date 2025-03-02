@@ -1,0 +1,36 @@
+.back-to-top
+  position: fixed 
+  right: 82px
+  bottom: 42px
+
+  width: 48px
+  height: 48px
+  border-radius: 50%
+
+  background-color: $teal
+
+  cursor: pointer
+  z-index: 1
+
+  @include transition
+
+  @media only screen and (max-width: 1220px)
+    right: 24px
+  @media only screen and (max-width: 950px)
+    bottom: 42px
+
+  &--hidden
+    opacity: 0
+    visibility: hidden
+
+  svg 
+    width: 16px
+    height: 16px
+    stroke: $dark-sky
+    @include transition
+
+  &:hover 
+    background-color: $teal-hover 
+    svg 
+      transform: translateY(-3px)
+      stroke: $white

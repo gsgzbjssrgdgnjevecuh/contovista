@@ -1,0 +1,189 @@
+.history-slider
+  overflow: hidden
+
+  .container  
+    position: relative
+
+  &__wrapper  
+    margin-top: 48px
+    padding-bottom: 80px
+    width: 100vw
+    position: unset
+
+    @media only screen and (max-width: 768px)
+      padding: 120px 0 0 0
+      width: auto
+
+  &__slide
+    display: flex!important
+    margin-right: 128px
+
+    @media only screen and (max-width: 1100px)
+      flex-direction: column
+      margin-right: 50px
+    @media only screen and (max-width: 768px)
+      margin-right: 16px
+    @media only screen and (max-width: 425px)
+      margin: 0 8px
+      max-width: 84vw
+
+    &-image 
+      max-width: 412px
+      margin-right: 20px
+
+      @media only screen and (max-width: 1100px)
+        margin-right: 0
+        height: 175px
+        img 
+          height: 100%
+          width: auto
+      @media only screen and (max-width: 425px)
+        max-width: 100%
+        height: unset
+        img 
+          width: 100%
+          height: auto
+
+    &-title 
+      margin-bottom: 16px
+
+      @media only screen and (max-width: 1100px)
+        margin: 32px 0 24px
+
+    &-info
+      max-width: 504px
+
+      @media only screen and (max-width: 1100px)
+        max-width: 300px
+      @media only screen and (max-width: 425px)
+        max-width: 100%
+
+  &__dots
+    margin: 0 auto 
+    padding: 45px 0
+    max-width: 1198px
+    position: relative
+
+    @media only screen and (max-width: 1300px)
+      margin: 0 40px
+
+    @media only screen and (max-width: 768px)
+      position: absolute
+      top: 110px
+      left: 0
+      width: 600px
+
+      @include transition
+
+    &-track 
+      position: absolute
+      top: 45px
+      left: 10px
+
+      width: 0
+      height: 14px
+
+      background-color: $dark-sky
+      border-radius: 50px
+
+      transition: all .1s ease
+      z-index: 1
+      
+      
+    .slick-dots
+      position: relative
+      bottom: unset
+
+      display: flex 
+      justify-content: space-between
+      align-items: center
+
+      height: 15px
+      width: 101%
+      margin: 0 auto
+      background-color: #F2F4F6
+      border-radius: 10px
+
+      li
+        position: relative
+        margin: 0
+        -webkit-tap-highlight-color: transparent
+
+        &::before
+          content: ''
+          position: absolute
+          top: -1px
+          left: 0
+          width: 21px
+          height: 21px 
+          margin: 0
+          border-radius: 22px
+          background-color: $dark-sky-20
+
+          transition: all .05s ease
+          z-index: 1
+
+
+        &:hover 
+          &::before
+            top: -4px
+            left: -2px
+            width: 26px
+            height: 26px 
+            background-color: $teal 
+
+        span 
+          position: absolute
+          top: -43px
+          left: -10px
+
+          font-weight: 700
+          font-size: 18px
+          line-height: 24px
+          color: $dark-sky
+
+          @include transition
+
+          @media only screen and (max-width: 768px)
+            font-size: 16px
+            line-height: 24px
+
+      .slick-active
+        &::before
+          top: -4px
+          left: -2px
+          width: 26px
+          height: 26px 
+          background-color: $teal 
+          box-shadow: 2px 4px 30px rgba(0, 35, 67, 0.15)
+
+          @media only screen and (max-width: 768px)
+            width: 28px
+            height: 28px
+            top: -5px
+
+        span
+          font-weight: 600 
+          font-size: 40px
+          line-height: 54px
+          left: -41px
+          top: -66px
+
+          @media only screen and (max-width: 768px)
+
+            font-weight: 700
+            font-size: 20px
+            line-height: 24px
+            left: -15px
+            top: -45px
+
+
+    .slick-dot 
+      &--dark
+        &::before
+          background-color: $dark-sky!important
+
+          @media only screen and (max-width: 768px)
+            top: -3px!important
+            border: 2px solid $white
+        

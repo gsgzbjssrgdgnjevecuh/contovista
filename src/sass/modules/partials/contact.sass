@@ -1,0 +1,40 @@
+.contact
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+  &--footer-stick
+    margin-bottom: -160px!important
+    @media only screen and (max-width: 768px)
+      margin-bottom: -70px!important
+
+  &--diagonal-up
+    clip-path: polygon(0 160px,100% 0,100% 100%,0 100%)
+    padding: 243px 0 101px
+
+    @media only screen and (max-width: 768px)
+      clip-path: polygon(0 50px,100% 0,100% 100%,0 100%)
+      padding: 100px 0 40px
+
+  &--diagonal-down
+    clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%)
+    padding: 120px 0 224px
+
+    @media only screen and (max-width: 768px)
+      clip-path: polygon(0 0, 100% 0, 100% 91%, 0% 100%)
+      padding: 60px 0 80px
+
+  &__wrapper
+    max-width: 736px
+
+    h2 
+      @media only screen and (max-width: 768px)
+        font-size: 22px
+        line-height: 28px
+        font-weight: 700 
+    p 
+      margin: 24px 0 40px
+      @media only screen and (max-width: 768px)
+        font-weight: 600 
+
+ 

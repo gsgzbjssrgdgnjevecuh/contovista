@@ -1,0 +1,300 @@
+.hbspt-form,
+.rbox-application
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  textarea,
+  select
+    background: #F2F4F6!important
+    border-radius: 40px!important
+    border: 2px solid rgba(0,0,0,0)!important
+
+    padding: 10px 20px!important
+
+    font-family: $main-font
+    font-weight: 500
+    font-size: 18px
+    line-height: 28px
+    color: #00294B!important
+    box-shadow: none 
+    outline: none
+    -webkit-appearance: none
+    @include transition 
+
+    @media only screen and (max-width: 600px)
+      width: 100%
+      box-sizing: border-box
+
+    &:focus 
+      box-shadow: none!important
+      border-color: #00000000!important
+
+    &::-webkit-input-placeholder
+      font-weight: 500
+      font-size: 18px
+      line-height: 28px
+      color: $dark-sky-50
+      @include transition
+      
+  input[type="checkbox"]
+    max-height: 0
+    appearance: none 
+    -webkit-tap-highlight-color: transparent
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 10px
+      width: 20px
+      height: 20px
+      background: #F2F4F6
+      border: 2px solid #E5EAED
+      border-radius: 2px
+      @include transition
+  input[type="checkbox"]
+    &:checked
+      &::before
+        border: 2px solid $dark-sky
+      &::after
+        content: ''
+        position: absolute
+        left: 0 
+        top: 10px
+        width: 20px
+        height: 20px
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4.25L4.75 8L11.75 1' stroke='%2300294B' stroke-width='2'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+        background-position: 90% 70%
+
+  input[type="submit"],
+  button[type="submit"]
+    font-size: 18px!important
+    line-height: 22px!important
+    font-weight: 700 
+    text-align: center
+    text-transform: unset!important
+
+    border-radius: 40px
+    border: 2px solid $teal!important 
+    color: $dark-sky!important
+    background-color: $teal!important 
+
+    padding: 12px 20px
+    position: relative
+
+    width: auto!important
+    height: auto!important
+    min-height: 48px
+    margin-left: 0!important
+
+    @include transition
+    cursor: pointer
+  
+    &:hover 
+      background-color: $teal-hover!important
+      border: 2px solid $teal-hover!important
+      color: $white!important
+
+    &:focused 
+      background-color: $teal-hover!important
+      color: $white!important
+      box-shadow: 0px 0px 0px 3px $teal
+        
+    @media only screen and (max-width: 768px)
+      font-size: 16px!important
+      line-height: 20px!important 
+ 
+  select 
+    position: relative
+    &:after 
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+
+  textarea
+    border-radius: 20px!important
+    box-shadow: none!important
+    min-height: 140px
+    border: 2px solid rgba(0,0,0,0)!important
+    resize: none
+    @media only screen and (max-width: 600px)
+      width: 100%
+
+  label 
+    font-weight: 500
+    font-size: 18px
+    line-height: 28px
+    color: $dark-sky
+    font-size: 16px
+    width: 100%!important
+
+
+
+// Application forms
+.rbox-application
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  textarea,
+  select
+    width: 412px
+    box-sizing: border-box
+    @media only screen and (max-width: 550px)
+      width: 100%
+
+  label 
+    position: relative
+    width: fit-content!important
+    a 
+      display: inline
+
+  .rbox-checkbox-label
+    padding-left: 20px 
+
+  input[type="checkbox"]
+    &::before
+      top: 3px
+    &:checked
+      &::after
+        top: 3px
+
+  input[type="file"]
+    position: relative
+    font-size: 14px
+    box-shadow: none!important
+    
+    &::-webkit-file-upload-button
+      
+      padding: 5px 13px
+      background-color: $white
+      border: 2px solid #22ECBB
+      border-radius: 40px
+
+      text-align: center
+      font-weight: 700
+      font-size: 16px
+      line-height: 20px
+      color: #00294B
+
+      cursor: pointer
+
+      @media only screen and (max-width: 550px)
+        // width: 100%
+
+// Application forms 
+
+
+// Hot spot forms
+.hbspt-form
+  input,
+  textarea, 
+  select
+    width: 100%
+    box-sizing: border-box
+
+  label 
+    display: none
+
+  .legal-consent-container
+    .hs-form-booleancheckbox-display
+      display: block
+      p
+        font-weight: 500
+        font-size: 18px
+        line-height: 28px
+        color: #455B73
+        @media only screen and (max-width: 768px)
+          font-size: 16px
+          line-height: 20px
+    p 
+      font-weight: 500
+      font-size: 14px
+      line-height: 20px
+      color: $dark-sky-50
+      a
+        position: relative
+        display: inline
+        font-weight: 700
+        color: $dark-sky
+        @include transition
+
+        &:hover 
+          color: $teal
+
+        &::after
+          content: ''
+          position: absolute
+          bottom: -3px
+          left: 0
+          width: 100%
+          height: 2px
+          background-color: $teal 
+
+
+
+  .hs-error-msg
+    display: none 
+
+  input.error,
+  textarea.error,
+  select.error 
+    color: $red!important
+    border: 2px solid $red!important
+    background-color: $fantasy!important
+
+    &::-webkit-input-placeholder
+      color: $red
+
+  .hs-form-booleancheckbox
+    position: relative
+    padding-left: 20px
+
+
+// contact form
+.contact-form 
+  form,
+  .submitted-message  
+    max-width: 844px
+    margin: 0 auto
+    box-shadow: 2px 4px 30px rgba(0, 35, 67, 0.15)
+    border-radius: 8px
+    padding: 40px 40px 24px 40px
+    box-sizing: border-box
+    background-color: $white
+
+    @media only screen and (max-width: 768px)
+      padding: 24px 24px 8px 24px
+
+    & > *
+      margin-bottom: 16px
+
+    input[type="submit"]
+      margin-top: 16px
+
+  &__sidebar
+    max-width: 284px
+    margin-left: 40px
+    @media only screen and (max-width: 768px)
+      max-width: 100%
+      margin-top: 40px
+      margin-left: 0
+
+    h3 
+      margin-bottom: 24px
+
+  &__wrapper--contact  
+    @media only screen and (max-width: 768px)
+      flex-direction: column
+// contact form
+
+
+
+// Hot spot forms
+
+  

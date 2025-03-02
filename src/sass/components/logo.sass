@@ -1,0 +1,47 @@
+.logo
+  cursor: pointer 
+
+  &--icon 
+    width: 73px
+    height: 73px
+    max-height: 73px
+    @include transition
+
+    @media only screen and (max-width: 768px)
+      width: 63px
+      height: 63px
+
+  &--letters 
+    width: 73px
+    height: 10px
+    margin-top: 9px
+    @include transition
+
+    @media only screen and (max-width: 768px)
+      width: 63px
+      margin-top: 7px
+    
+    svg 
+      fill: $white
+      display: block
+
+    &--dark 
+      svg 
+        fill: $dark-sky 
+
+
+  &--header 
+    svg
+      fill: $white
+  &--footer 
+    width: 74px
+    height: 92px
+    margin-right: 142px
+    @media only screen and (max-width: 1220px)
+      margin-right: 50px
+    svg 
+      fill: $white 
+
+.logo--letters--dark
+  svg
+    fill: $dark-sky

@@ -1,0 +1,101 @@
+.language-switcher
+  max-width: 14px
+  margin-left: 19px
+  padding: 5px
+  background-color: #e5eaed
+  border-radius: 40px
+
+  overflow: hidden
+  cursor: pointer
+  -webkit-tap-highlight-color: transparent
+  @include transition
+
+  &:hover
+    max-width: 62px
+    
+
+  .wpml-ls-legacy-list-horizontal
+    border: none 
+    padding: 0
+
+    ul 
+      display: flex
+      @media only screen and (max-width: 1230px)
+        flex-direction: column-reverse
+      & > *
+        @include transition
+        padding-right: 10px
+        @media only screen and (max-width: 1230px)
+          padding-right: 0
+
+    a 
+      width: 14px
+      height: 14px
+      border-radius: 50%
+      overflow: hidden
+      padding: 0
+      line-height: 0
+      @media only screen and (max-width: 1230px)
+        width: 30px
+        height: 30px
+         
+      img
+        height: 100%
+
+  &--menu 
+    position: absolute
+    top: 19px
+    right: 20px
+    max-height: 14px
+
+    transform: translateX(50%)
+    opacity: 0
+    visibility: hidden
+    @media only screen and (max-width: 1230px)
+      display: none
+
+    &:hover
+      max-height: 62px
+      max-width: 14px
+
+    &--mobile
+      display: none
+      @media only screen and (max-width: 1230px)
+        display: flex 
+        align-items: flex-end
+        padding: 0
+
+        position: absolute
+        bottom: -60px
+        left: 0
+        
+        margin: 0
+        max-width: 100%
+        max-height: 60px
+        // max-height: 150px
+
+        width: 60px
+        box-sizing: border-box
+
+        background-color: $white
+        box-shadow: 3.33333px 6.66667px 50px rgba(0, 35, 67, 0.15)
+        border-radius: 66px
+
+        opacity: 1
+        visibility: visible
+        transform: translateX(0)
+        @include transition
+        &-opened 
+          max-height: 180px
+
+        ul 
+          & > *
+            margin: 15px!important
+
+    .wpml-ls-legacy-list-horizontal
+      ul 
+        flex-direction: column
+        & > *
+          &:not(:last-child) 
+            padding-bottom: 10px
+

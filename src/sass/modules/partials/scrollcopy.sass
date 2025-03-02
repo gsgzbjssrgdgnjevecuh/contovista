@@ -1,0 +1,144 @@
+.scrollcopy
+  &__wrapper 
+    position: relative
+
+  &__stickybar
+    width: 412px
+    margin-right: 24px
+
+    @media only screen and (max-width: 1000px) 
+      display: none
+
+    &-item  
+      font-size: 24px 
+      line-height: 30px
+      font-weight: 700 
+      color: $dark-sky-80
+      
+      padding: 24px 0
+      cursor: pointer 
+      @include transition
+
+      &:not(:last-child) 
+        border-bottom: 1px solid #E5EAED
+
+      &:hover 
+        color: $teal 
+
+      &--active 
+        color: $teal
+
+  &__content
+    width: 736px
+    @include transition 
+    @media only screen and (max-width: 1000px)
+      width: 100%
+
+    &-item 
+      margin-bottom: 50px
+      position: absolute 
+
+      opacity: 0
+      visibility: hidden
+
+      @include transition
+
+      @media only screen and (max-width: 1000px)
+        position: relative
+
+        opacity: 1
+        visibility: visible
+     
+        margin-bottom: 0
+        padding: 24px 0
+
+        max-height: 30px 
+        overflow: hidden
+
+        &:not(:last-child) 
+          border-bottom: 1px solid #E5EAED
+
+      &--active 
+        opacity: 1
+        visibility: visible 
+        @media only screen and (max-width: 1000px)
+          max-height: unset
+
+      &-subtitle 
+        display: none
+
+        margin-bottom: 24px
+
+        font-size: 24px
+        line-height: 30px
+        font-weight: 700
+        color: $dark-sky-80
+
+        @include transition
+
+        &--active
+          color: $teal
+
+
+        @media only screen and (max-width: 1000px)
+          display: block
+
+
+      img 
+        width: 628px
+        margin-bottom: 40px
+        @media only screen and (max-width: 768px)
+          width: 100%
+          margin-bottom: 8px
+
+      h3 
+        margin: 0 0 24px
+        font-weight: 700
+        @media only screen and (max-width: 768px)
+          font-size: 16px
+          line-height: 24px
+          font-weight: 600
+          margin: 0 0 8px
+
+      // a 
+      //   position: relative
+      //   display: inline
+      //   color: $dark-sky 
+      //   font-weight: 700
+
+      //   @include transition 
+
+      //   &:after 
+      //     content: ''
+      //     width: 100%
+      //     height: 2px
+      //     background-color: $teal 
+      //     position: absolute
+      //     bottom: 0
+      //     left: 0
+
+      //   &:hover 
+      //     color: $teal
+
+      li 
+        position: relative
+        padding-left: 24px
+        color: $dark-sky-80
+
+        &:not(:last-child) 
+          margin-bottom: 16px
+        
+        &::before
+          content: ''
+          width: 4px
+          height: 4px
+          background-color: $dark-sky
+          position: absolute
+          left: 0
+          top: 12px
+          border-radius: 50%
+
+      .btn 
+        margin-top: 24px 
+ 
+ 

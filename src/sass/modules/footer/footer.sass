@@ -1,0 +1,105 @@
+.footer 
+  padding: 250px 0 48px
+  background-color: $dark-sky 
+  clip-path: polygon(0 160px, 100% 0%, 100% 100%, 0% 100%)
+  @media only screen and (max-width: 950px)
+    padding: 60px 0 24px
+    clip-path: polygon(0 43px, 100% 0%, 100% 100%, 0% 100%)
+  
+  &--with-newsletter-section
+    @media only screen and (max-width: 950px)
+      padding: 143px 0 24px
+
+  .container 
+    @media only screen and (max-width: 950px)
+      flex-direction: column
+
+  &__contact-us
+    @media only screen and (max-width: 950px)
+      margin-top: 45px
+    @media only screen and (max-width: 768px)
+      .title
+        font-size: 30px
+        line-height: 34px
+      
+    a
+      font-size: 40px
+      line-height: 54px
+
+      @include transition 
+
+      &:hover 
+        color: $teal-hover
+
+      @media only screen and (max-width: 768px)
+        font-size: 30px
+        line-height: 34px 
+
+    .btn 
+      margin-top: 37px
+      @media only screen and (max-width: 768px)
+        margin-top: 18px
+
+  &__info
+    margin: 22px 130px 0  
+    max-width: 196px 
+    font-size: 18px
+    line-height: 28px
+    @media only screen and (max-width: 1220px)
+      margin: 22px 50px 0
+    @media only screen and (max-width: 950px)
+      margin: 44px 0 83px
+    span 
+      display: block
+    a 
+      @include transition 
+      &:hover 
+        color: $teal
+      
+  &__social 
+    margin-top: 20px
+    @media only screen and (max-width: 950px)
+      display: flex
+      flex-direction: row 
+      align-items: center
+    a
+      width: 23px
+      height: 23px
+      &:not(:last-child)
+        margin-bottom: 21px
+        @media only screen and (max-width: 950px)
+          margin-bottom: 0
+          margin-right: 27px
+
+      svg 
+        fill: $white
+        @include transition 
+      &:hover 
+        svg 
+          fill: $teal
+
+  
+
+  &__bottom 
+    margin-top: 90px
+    @media only screen and (max-width: 768px)
+      margin-top: 42px
+      font-size: 14px
+      line-height: 28px
+    @media only screen and (max-width: 400px)
+      flex-direction: column-reverse
+      align-items: flex-start
+  &__menu
+    li
+      &:not(:last-child)
+        margin-right: 32px
+        @media only screen and (max-width: 768px)
+          margin-right: 16px
+    a 
+      color: $dark-sky-50
+      padding: 0
+      @include transition 
+      &:hover 
+        color: $white
+
+   

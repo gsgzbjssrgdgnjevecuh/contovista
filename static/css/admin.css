@@ -1,0 +1,8 @@
+.block-editor-block-list__layout .block-editor-block-list__block {
+  max-width: 100%;
+}
+.services__wrapper {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll; 
+}

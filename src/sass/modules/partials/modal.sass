@@ -1,0 +1,54 @@
+.modal
+  position: fixed 
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: #00294b80
+  z-index: 10
+
+  overflow-y: scroll
+  box-sizing: border-box
+  padding: 24px 0 
+
+  display: grid!important
+
+  form 
+    max-width: 628px
+
+  @include transition
+
+  &--closed 
+    opacity: 0
+    visibility: hidden  
+
+    form,
+    .modal--close 
+      transform: translateY(-50px)
+
+  .container 
+    position: relative
+    margin: auto
+
+  form 
+    position: relative
+    @include transition
+
+  &--close 
+    position: absolute
+    top: 14px
+    right: 38px
+
+    width: 24px
+    height: 24px
+
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.5858 11.9994L4.92893 17.6563L6.34315 19.0705L12 13.4136L17.6569 19.0705L19.0711 17.6563L13.4142 11.9994L19.0711 6.34255L17.6569 4.92834L12 10.5852L6.34315 4.92834L4.92893 6.34255L10.5858 11.9994Z' fill='%2300294B'/%3E%3C/svg%3E")
+    background-repeat: no-repeat
+
+    z-index: 1
+    cursor: pointer
+    @include transition
+
+    @media only screen and (max-width: 768px)
+      top: 4px
+      right: 28px
