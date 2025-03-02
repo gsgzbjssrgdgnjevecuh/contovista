@@ -12,49 +12,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
   <head>
-    <!-- Google Consent Mode -->
-    <script data-cookieconsent="ignore">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag("consent", "default", {
-        ad_storage: "denied",
-        analytics_storage: "denied",
-        functionality_storage: "denied",
-        personalization_storage: "denied",
-        security_storage: "granted",
-        wait_for_update: 500
-      });
-      gtag("set", "ads_data_redaction", true);
-    </script>
-    <!-- End Google Consent Mode-->
-    
-
-    <!-- Google Tag Manager -->
-    <script>
-      if(navigator.userAgent.indexOf("Speed Insights") == -1 && navigator.userAgent.indexOf("Lighthouse") == -1) {
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-K37D7W7');
-      }
-    </script>
-    <!-- End Google Tag Manager -->
-
-
-
-    <!-- Cookiebot CMP-->
-    <script
-      id="Cookiebot"
-      src="https://consent.cookiebot.com/uc.js"
-      data-cbid="18d4f7f2-8d74-4b94-a9cd-6cf2a6c1555d"
-      data-blockingmode="auto"
-      type="text/javascript"
-    ></script>
-    <!-- End Cookiebot CMP -->
-
+  
     <meta charset="<?php bloginfo( 'charset' ) ?>">
     <title><?php wp_title(); ?></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -70,10 +28,7 @@
     <!-- Get template url for JS  -->
   </head>
   <body <?php body_class('cam'); ?>>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K37D7W7"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) --> 
+    
 
     <header class="navigation">
       <div class="container flex row aic jcsb">
